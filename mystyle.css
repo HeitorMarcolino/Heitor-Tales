@@ -65,7 +65,14 @@ body{
 .requisitos{
     display:grid;
     grid-template-columns: 1fr 1fr;
-    background-color: red;
     max-width: 700px;
-
+    justify-self: center;
+    grid-column: 1/3;
+    gap: 100px;
+}
+.requisitos h2{
+    font-size: 20px;
+}
+.requisitos p{
+    margin-top: 10px;
 }
