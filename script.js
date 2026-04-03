@@ -10,6 +10,7 @@ formulario.addEventListener('submit', function (evento) {
     const trailerD = document.getElementById('trailer').value;
     const novo = {
         titulo: tituloD,
-        imagem: imagemD
+        imagem: imagemD,
+        trailer: trailerD,
     };
 });
