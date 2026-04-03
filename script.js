@@ -2,7 +2,7 @@ function alterarFundo() {
     document.body.style.backgroundColor = "black";
 }
 
-const formulario = document.getElementById('formjogo');
+const formulario = document.getElementById('formJogo');
 formulario.addEventListener('submit', function (evento) {
     evento.preventDefault();
     const tituloD = document.getElementById('nome').value;
