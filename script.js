@@ -14,7 +14,7 @@ formulario.addEventListener('submit', function (evento) {
 
     const novo = {
         newname,
-        newiamge,
+        newimage,
         newsynopsis,
         newprice
     };
