@@ -10,18 +10,15 @@
 
 <body>
     <div class="formulario">
-        <form id="formJogo">
+        <form id="formjogo">
             <input type="text" id="nome" placeholder="Nome do jogo" required><br>
-            <input type="text" id="imagem" placeholder="URL da imagem" required><br>
-            <input type="text" id="trailer" placeholder="Link do YouTube embed" required><br>
-
-            <textarea id="sinopse" placeholder="Sinopse"></textarea>
-            <input type="text" id="data" placeholder="Data de lançamento">
-            <input type="text" id="dev" placeholder="Desenvolvedora">
-            <textarea id="minimo" placeholder="Requisitos mínimos (um por linha)"></textarea>
-            <textarea id="recomendado" placeholder="Requisitos recomendados (um por linha)"></textarea>
+            <input type="url" id="imagem" placeholder="URL da imagem" required><br>
+            <textarea id="sinopse" placeholder="Sinopse do jogo" required></textarea><br>
+            <input type="number" id="preco" placeholder="Preço (R$)" required><br>
             <button type="submit">Adicionar Jogo</button>
-    </form>
+
+        </form>
+    </div>
     </div>
     <script src="script.js"></script>
 </body>
