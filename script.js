@@ -1,27 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
+function alterarFundo() {
+    document.body.style.backgroundColor = "black";
+}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="forms.css">
-    <title>Document</title>
-    <script src="script.js" defer></script>
-</head>
+const formulario = document.getElementById('formjogo');
 
-<body>
-    <div class="formulario">
-        <form id="formjogo">
-            <input type="text" id="nome" placeholder="Nome do jogo" required><br>
-            <input type="url" id="imagem" placeholder="URL da imagem" required><br>
-            <textarea id="sinopse" placeholder="Sinopse do jogo" required></textarea><br>
-            <input type="number" id="preco" placeholder="Preço (R$)" required><br>
-            <button type="submit">Adicionar Jogo</button>
+formulario.addEventListener('submit', function (evento) {
+    evento.preventDefault();
 
-        </form>
-    </div>
-    </div>
-    <div id="colecao"></div>
-</body>
+    const newname = document.getElementById('nome').value;
+    const newimage = document.getElementById('imagem').value;
+    const newsynopsis = document.getElementById('sinopse').value;
+    const newprice = document.getElementById('preco').value;
 
-</html> 
+    const novo = {
+        newname,
+        newimage,
+        newsynopsis,
+        newprice
+    };
+    const newcard=`
+        <div class="game-card">
+            <img src="${novo.newimage}">
+            <div class="card-content">
+                <h3>${novo.newname}</h3>
+                <p>${novo.newsynopsis}</p>
+                <span class="price">R$${novo.newprice}</span>
+            </div>
+        </div>
+    `;
+    const colecao = document.getElementById('colecao');
+    console.log(newcard)
+    formulario.innerHTML += newcard;
+});
