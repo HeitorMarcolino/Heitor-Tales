@@ -1,21 +1,27 @@
-function alterarFundo() {
-    document.body.style.backgroundColor = "black";
-}
+<!DOCTYPE html>
+<html lang="en">
 
-const formulario = document.getElementById('formjogo');
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="forms.css">
+    <title>Document</title>
+    <script src="script.js" defer></script>
+</head>
 
-formulario.addEventListener('submit', function (evento) {
-    evento.preventDefault();
+<body>
+    <div class="formulario">
+        <form id="formjogo">
+            <input type="text" id="nome" placeholder="Nome do jogo" required><br>
+            <input type="url" id="imagem" placeholder="URL da imagem" required><br>
+            <textarea id="sinopse" placeholder="Sinopse do jogo" required></textarea><br>
+            <input type="number" id="preco" placeholder="Preço (R$)" required><br>
+            <button type="submit">Adicionar Jogo</button>
 
-    const newname = document.getElementById('nome').value;
-    const newimage = document.getElementById('imagem').value;
-    const newsynopsis = document.getElementById('sinopse').value;
-    const newprice = document.getElementById('preco').value;
+        </form>
+    </div>
+    </div>
+    <div id="colecao"></div>
+</body>
 
-    const novo = {
-        newname,
-        newimage,
-        newsynopsis,
-        newprice
-    };
-});
+</html> 
